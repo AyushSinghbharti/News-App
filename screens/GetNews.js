@@ -7,6 +7,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Pressable
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import API_KEY from "../components/Api_key";
@@ -49,7 +50,7 @@ const GetNews = (props) => {
           <ScrollView showsVerticalScrollIndicator={false}>
             {news.map((item, index) =>
               item.urlToImage ? (
-                <TouchableOpacity
+                <Pressable
                   key={index}
                   onPress={() =>
                     props.navigation.navigate("WebView", {
@@ -69,7 +70,7 @@ const GetNews = (props) => {
                       style={[styles.image]}
                     />
                   </View>
-                </TouchableOpacity>
+                </Pressable>
               ) : null
             )}
           </ScrollView>
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     backgroundColor: "white",
     elevation: 5,
-    borderRadius: 15,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
     alignContent: "center",
@@ -115,7 +116,7 @@ const styles = StyleSheet.create({
   },
   title: {
     flex: 1,
-    fontSize: 14,
+    fontSize: 14.5,
     fontWeight: "500",
   },
   date: {

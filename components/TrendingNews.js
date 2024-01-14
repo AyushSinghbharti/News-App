@@ -53,16 +53,21 @@ const TrendingNews = () => {
     );
 };
 
+const width = 200;
+const height = width/1.8;
+// alert(height) 
 const styles = StyleSheet.create({
     image: {
-        height: 115,
-        width: 200,
+        height: height,
+        width: width,
         borderRadius: 10
     },
     text: {
-        width: 200,
+        height: 70,
+        width: width,
         fontSize: 14,
         fontWeight: '500',
+        marginBottom: 5,
     }
 });
 export default TrendingNews;

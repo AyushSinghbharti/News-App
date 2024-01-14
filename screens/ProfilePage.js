@@ -53,7 +53,7 @@ const ProfilePage = () => {
                         <Text style={styles.buttonText}>SignOut</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button1} onPress={handleDelete}>
-                        <Text style={styles.buttonText1}>Delete Account</Text>
+                        <Text style={styles.buttonText1}>{auth.currentUser?.email !== undefined ? "Delete Account" : "Create account"}</Text>
                     </TouchableOpacity>
                 </View>
             </View>

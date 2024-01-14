@@ -16,10 +16,6 @@ const HomeScreen = () => {
         }).catch(error => alert(error.message))
     }
 
-    const handleGuestLogin = () => {
-        navigation.navigate("Home");
-        alert("You Logged in as guest")
-    }
     const navigation = useNavigation();
     return (
         <>

@@ -27,6 +27,11 @@ const LoginScreen = () => {
         .catch(error => alert(error.message))
     }
 
+    const handleGuestLogin = () => {
+        navigation.navigate("Home");
+        alert("You Logged in as guest")
+    }
+
     return (
         <KeyboardAvoidingView style={styles.mainScreen} behavior='height'>
             <Image
@@ -66,7 +71,7 @@ const LoginScreen = () => {
                     <Text style={styles.buttonText}>Register</Text>
                 </TouchableOpacity>
                 <View style={[{ flexDirection: 'row', marginTop: 3 }]}>
-                    <TouchableOpacity style={[{ flex: 1 }]}>
+                    <TouchableOpacity style={[{ flex: 1 }]} onPress={handleGuestLogin}>
                         <Text style={[styles.BelowButtonText, { flex: 1 }]}>Continue as a guest</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate('Login')}>

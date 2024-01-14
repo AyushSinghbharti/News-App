@@ -1,13 +1,13 @@
 {
   "expo": {
     "name": "NewsApplication",
-    "slug": "NewsApplication",
+    "slug": "newsapplication",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/LogoIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/LoadingScreen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +15,30 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ayushsingh.newsapplication",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "83952156-aff6-422b-a138-aa62e6a2ad1e"
+      }
+    },
+    "owner": "ayushsingh",
+    "updates": {
+      "url": "https://u.expo.dev/83952156-aff6-422b-a138-aa62e6a2ad1e"
     }
   }
 }
